@@ -99,6 +99,12 @@ public class FlutterWebView implements PlatformView, MethodCallHandler {
             ? new WebView(context)
             : new InputAwareWebView(context, containerView);
 
+    // Transparent background
+    boolean opaque = (boolean) params.get("opaque");
+    if (!opaque) {
+      webView.setBackgroundColor(0x00000000);
+    }
+
     displayListenerProxy.onPostWebViewInitialization(displayManager);
 
     platformThreadHandler = new Handler(context.getMainLooper());
