@@ -1,3 +1,7 @@
+## 2.0.10
+
+* Add an option to set a transparent background for the webview.
+
 ## 2.0.9
 
 * Add iOS UI integration test target.
